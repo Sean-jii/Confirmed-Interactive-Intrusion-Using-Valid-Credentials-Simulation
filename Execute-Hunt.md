@@ -123,15 +123,15 @@ DeviceProcessEvents
 
 | where ProcessCommandLine has_any (
 
-    "net user",
+ "net user",
     
-    "net localgroup",
+"net localgroup",
     
-    "systeminfo",
+"systeminfo",
     
-    "ipconfig",
+"ipconfig",
     
-    "whoami"
+"whoami"
 )
 
 <img width="1464" height="178" alt="5" src="https://github.com/user-attachments/assets/aa8944c6-2cd5-4590-a67e-4bff7a514a2b" />
@@ -154,11 +154,11 @@ DeviceProcessEvents
 
 | where ProcessCommandLine has_any (
 
-    "lsass",
+"lsass",
     
-    "HKLM\\SAM",
+"HKLM\\SAM",
     
-    "HKLM\\SECURITY"
+"HKLM\\SECURITY"
 )
 
 <img width="1478" height="89" alt="6" src="https://github.com/user-attachments/assets/f011f886-4867-49e3-a6fc-1e6cb964ffd5" />
@@ -181,10 +181,10 @@ DeviceEvents
 
 | where ActionType in (
 
-    "UserAccountCreated",
+"UserAccountCreated",
     
 
-    "UserAccountAddedToLocalGroup"
+"UserAccountAddedToLocalGroup"
 )
 
 <img width="1457" height="40" alt="7" src="https://github.com/user-attachments/assets/222e4248-44ca-432a-8054-59c755c23578" />
