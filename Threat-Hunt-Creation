@@ -31,7 +31,6 @@ A standard user account is created on the Windows 10 virtual machine to represen
 net user jsmith P@ssw0rd123! /add
 net localgroup "Remote Desktop Users" jsmith /add
 
-
 This user account represents the attacker’s initial foothold after obtaining valid credentials.
 
 
@@ -53,6 +52,7 @@ Flag 3 — PowerShell Execution by a Non-Administrative User
 While logged in as the standard user jsmith, PowerShell is launched interactively. This demonstrates post-compromise execution capability using a living-off-the-land binary that is commonly abused by attackers. The following command is used:
 
 powershell.exe
+
 
 
 This activity is recorded in DeviceProcessEvents and establishes baseline post-logon execution behavior.
