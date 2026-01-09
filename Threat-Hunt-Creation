@@ -34,6 +34,8 @@ net localgroup "Remote Desktop Users" jsmith /add
 
 This user account represents the attacker’s initial foothold after obtaining valid credentials.
 
+
+
 Part 2 — Attack Simulation (Flag-by-Flag)
 
 The attack simulation is conducted entirely using native Windows utilities. Each action represents a meaningful attacker behavior and produces telemetry that can later be identified through threat hunting. When viewed individually, the actions resemble normal user or administrative activity, but when correlated they clearly indicate malicious intent.
