@@ -1,1 +1,29 @@
 
+Threat Hunt Findings
+
+Device Name: seanji-threathu
+Administrator Account: Seanji
+Standard User (Compromised): jsmith
+This section documents the results of a structured threat hunt conducted using Microsoft Defender for Endpoint in an Azure Windows 10 environment. Each flag represents a distinct attacker behavior observed during a simulated intrusion using the compromised user account jsmith on the host seanji-threathu.
+
+Flag 1 – Successful Logon from a Rare External IP Address
+
+A successful interactive logon was observed on seanji-threathu using the account jsmith from an external IP address that is rarely associated with this device. 
+
+KQL Query Used:
+
+DeviceLogonEvents
+
+| where DeviceName == "seanji-threathu"
+
+| where ActionType == "LogonSuccess"
+
+| where AccountName == "jsmith"
+
+| summarize LogonCount = count() by RemoteIP
+
+| where LogonCount < 5
+
+The IP address that was found was 174.237.12.168
+
+
